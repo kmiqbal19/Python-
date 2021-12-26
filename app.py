@@ -1677,3 +1677,26 @@ random = ["a", 0, 2]
 
 
 # decrement()
+#  ////// Decorators With Arguments ////////////////
+
+
+def operation(func):
+    def inner(x, y):
+        print(f"{x} / {y} = ")
+
+        if y == 0:
+            print("Cannot divided by zero!")
+            return
+        return func(x, y)
+
+    return inner
+
+
+# operation(divide)(2,3)
+@operation
+def divide(x, y):
+    print(x / y)
+
+
+divide(2, 3)
+divide(5, 6)
