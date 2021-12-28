@@ -1680,23 +1680,110 @@ random = ["a", 0, 2]
 #  ////// Decorators With Arguments ////////////////
 
 
-def operation(func):
-    def inner(x, y):
-        print(f"{x} / {y} = ")
+# def operation(func):
+#     def inner(x, y):
+#         print(f"{x} / {y} = ")
 
-        if y == 0:
-            print("Cannot divided by zero!")
-            return
-        return func(x, y)
+#         if y == 0:
+#             print("Cannot divided by zero!")
+#             return
+#         return func(x, y)
 
-    return inner
-
-
-# operation(divide)(2,3)
-@operation
-def divide(x, y):
-    print(x / y)
+#     return inner
 
 
-divide(2, 3)
-divide(5, 6)
+# # operation(divide)(2,3)
+# @operation
+# def divide(x, y):
+#     print(x / y)
+
+
+# divide(2, 3)
+# divide(5, 6)
+#  // Arguments and Keyword Arguments
+# def multiply(func):
+#     def digits(*args):
+#         print('This is decorator function..')
+#         func(*args)
+#         print('Yah')
+
+#     return digits
+
+
+# @multiply
+# def operations(x, y, z):
+#     print(f"{x} * {y} * {z} = {x*y*z}")
+# multiply(operations)(2,4,5)
+# operations(3, 5, 4)
+# Keyword argumetns ////////
+# def multiply(func):
+#     def digits(**args):
+#         print("This is decorator function..")
+#         func(**args)
+#         print("Yah")
+
+#     return digits
+
+
+# @multiply
+# def operations(x, y, z):
+#     print(f"{x} * {y} * {z} = {x*y*z}")
+
+
+# # multiply(operations)(x=2,y=4,z=5)
+# operations(x=2, y=4, z=5)
+# ///////// Chaining Decorators //////////////
+
+# def info_name(func):
+#     def full_name(*args):
+#         print('first name')
+#         func(*args)
+
+#     return full_name
+
+# def info_last_name(func):
+#     def last_name(*args):
+#         print('last name')
+#         func(*args)
+#     return last_name
+# @info_name
+# @info_last_name
+# def info(first_name, last_name):
+#     print(f'My fullname is {first_name} {last_name}')
+
+# info('K M', 'Iqbal')
+# ////////// Modules/////////////////
+# from module import app
+
+# app_add(2, 4)
+# import module
+
+# module.app_sub(2, 3)
+# module.app_add(2, 3)
+
+# from module import app_sub, app_add
+
+# app_add(3, 4)
+# app_add(7, 8)
+# //// Packages and Path
+# import sys
+
+# print(sys.path)
+# 01. Approach
+# import package_.social_media
+
+# package_.social_media.user_images()
+# package_.social_media.social_videos()
+# 02. Approach
+# from package_.social_media import user_images, social_videos
+# user_images()
+# social_videos()
+
+#  03. Approach
+# from package_ import social_media
+# social_media.user_images()
+# social_media.social_videos()
+
+# //// Sub package ////////
+# from package_.apps import apps
+# apps.apps()
