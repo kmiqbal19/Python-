@@ -1,5 +1,5 @@
 # Module
-import math
+# import math
 
 # print       ('hello world');
 
@@ -1787,3 +1787,87 @@ random = ["a", 0, 2]
 # //// Sub package ////////
 # from package_.apps import apps
 # apps.apps()
+#  ///// Built in dir() Method ////////
+# from package_ import social_media
+
+# print(dir(social_media))
+# print(social_media.__name__)
+# print(social_media.__package__)
+# print(social_media.__file__)
+
+#  /////////////// Path Library //////////////
+# from pathlib import Path
+
+# Creating absolute path in windows
+# path = Path("C:\\Program Files\\Python 3")
+# print(path)
+# Using raw string
+# path = Path(r"C:\Program Files\Python 3")
+# print(path)
+# print(id(path))
+#  Relative Paths
+# path = Path("users\__init__.py")
+# print(id(path))
+# path = Path()  # Represents the current folder
+#  Combining path objects together
+# path2 = Path("some_path") / Path("user")
+# print(path2)
+# Combining path object with a string
+# path3 = Path("some_path") / "combine" / "__init__.py"
+# print(path3)
+#  Getting the home directory of the current  user\
+
+# print(Path.home())
+#  //////// Working with Date and Time ////////////////////
+# from datetime import datetime
+
+# Getting the current date and time
+# print(datetime.now())
+# Getting the current date
+# import datetime
+# print(datetime.date.today())
+#  Getting the datetime attributes
+# import datetime
+# print(dir(datetime))
+#  Creating a date object
+
+# import datetime
+# time = datetime.date(2500, 5, 6)
+# print(time)
+# Importing the date class
+# from datetime import date
+
+# print(date(2199, 2, 22))
+#  Getting date from timestamp
+# from datetime import date
+
+# time_stamp = date.fromtimestamp(25585555555)
+# print(time_stamp)
+#  Getting todays month year day
+# from datetime import date
+
+# today = date.today()
+
+# print(f"Today : {today.day}\nMonth: {today.month}\nYear: {today.year}")
+# //////// Time Class
+# from datetime import time
+
+# # time = time()
+# # print(time)
+# time_1 = time(22, 25, 59, 599)
+# print(time_1)
+# time_2 = time(hour=12, minute=4, second=59, microsecond=121212)
+# print(time_2)
+# print(f"Hour: {time_2.hour}\nMinute: {time_2.min}\nSecond: {time_2.second}\nMilisecond: {time_2.microsecond}")
+# ////////// Date Time Class ///////////////////
+
+from datetime import datetime
+
+time = datetime(2019, 3, 25, 12, 12, 58)
+print("Year: ", time.year)
+print("Month: ", time.month)
+print("Day: ", time.day)
+print("Hour: ", time.hour)
+print("Minute: ", time.minute)
+print("Second: ", time.second)
+print("Year: ", time.timestamp())

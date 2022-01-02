@@ -1,0 +1,22 @@
+[
+  {
+    "Product": "T-shirt",
+    "Price": 5.99,
+    "Stock Availability": 15
+  },
+  {
+    "Product": "Jeans",
+    "Price": 13.99,
+    "Stock Availability": 8
+  },
+  {
+    "Product": "Watch",
+    "Price": 99.99,
+    "Stock Availability": 4
+  },
+  {
+    "Product": "Sweater",
+    "Price": 29.99,
+    "Stock Availability": 11
+  }
+]
